@@ -52,4 +52,4 @@ else:
         if computerChoice == 0:
             print("Computer Won 😭")
         else:
-            print("You win 😁")
+            print("You win 😁.")
