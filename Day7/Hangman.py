@@ -33,6 +33,6 @@ while not end_of_game:
             end_of_game = True
             print("You won.")
     else:
-        print("You have no more lives\n", art.stages[0])
+        print("You have no more lives.\n", art.stages[0])
         print("You lost.")
         break
