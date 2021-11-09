@@ -4,7 +4,6 @@ from turtle import *
     Turtle Colors: https://cs111.wellesley.edu/labs/lab01/colors
 """
 
-
 color('black', 'DarkMagenta')
 shape("turtle")
 begin_fill()
