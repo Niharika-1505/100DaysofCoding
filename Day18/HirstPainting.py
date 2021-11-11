@@ -34,6 +34,5 @@ def draw_hirst_painting(dot_size, space_between_dots, number_of_dots_per_line, t
             chinky.setheading(0)
 
 
-for i in range(5):
-    draw_hirst_painting(10, 10, 38, 1064)
+draw_hirst_painting(10, 10, 38, 1064)
 t.done()
