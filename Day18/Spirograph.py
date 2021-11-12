@@ -13,14 +13,14 @@ def generate_random_color():
     return random_color
 
 
-def draw_spirograph(size_of_gap):
+def draw_spirograph(size_of_gap, radius):
     for i in range(int(360 / size_of_gap)):
         chinky.pencolor(generate_random_color())
-        chinky.circle(100)
+        chinky.circle(radius)
         chinky.setheading(chinky.heading() + size_of_gap)
 
 
 chinky.pensize(1)
 chinky.speed("fastest")
-draw_spirograph(5)
+draw_spirograph(10, 20)
 t.done()

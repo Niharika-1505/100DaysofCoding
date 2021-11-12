@@ -23,16 +23,16 @@ def draw_a_shape_spirograph(num_of_sides, size_of_gap):
         chinky.setheading(chinky.heading() + size_of_gap)
 
 
-def draw_spirograph(size_of_gap):
+def draw_spirograph(size_of_gap, radius):
     for i in range(int(360 / size_of_gap)):
         chinky.pencolor(generate_random_color())
-        chinky.circle(100)
+        chinky.circle(radius)
         chinky.setheading(chinky.heading() + size_of_gap)
 
 
 chinky.pensize(1)
 chinky.speed("fastest")
-draw_spirograph(2)
+draw_spirograph(2, 100)
 for j in range(3, 5):
     draw_a_shape_spirograph(j, 2)
 t.done()
