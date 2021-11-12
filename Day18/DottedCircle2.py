@@ -38,7 +38,7 @@ circle_radius = 300
 j = 0
 while circle_radius != 0:
     chinky.color(colours[j])
-    if j <= 3:
+    if j < 3:
         j += 1
     else:
         j = 0
