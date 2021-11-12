@@ -25,13 +25,15 @@ def dotted_circle(radius):
         chinky.pendown()
 
 
-def draw_spirograph(size_of_gap):
+def draw_spirograph(size_of_gap, radius):
     for i in range(int(360 / size_of_gap)):
-        dotted_circle(100)
+        dotted_circle(radius)
         chinky.setheading(chinky.heading() + size_of_gap)
 
 
 chinky.pensize(1)
 chinky.speed("fastest")
-draw_spirograph(10)
+draw_spirograph(10, 100)
+draw_spirograph(10, 20)
+
 done()
