@@ -18,7 +18,7 @@ chinky.shape("turtle")
 chinky.color(generate_random_color())
 chinky.pensize(3)
 chinky.speed("fastest")
-for i in range(0, 500):
+for i in range(0, 100):
     chinky.pencolor(generate_random_color())
     chinky.setheading(random.choice(angle))
     chinky.forward(20)
