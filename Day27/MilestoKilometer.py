@@ -17,7 +17,7 @@ is_equal_to = Label(text="is equal to")
 is_equal_to.grid(row=1, column=0)
 
 # Label
-solution_label = Label(text=" ")
+solution_label = Label(text="0")
 solution_label.grid(row=1, column=1)
 
 # Label
