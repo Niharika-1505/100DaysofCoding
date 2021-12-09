@@ -26,4 +26,4 @@ if today_tuple in birthdays_dict:
             to_addrs=birthday_person["email"],
             msg=f"Subject:Happy Birthday!\n\n{contents}"
         )
-    print("Email sent")
+    print("Email sent.")
