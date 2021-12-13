@@ -14,9 +14,9 @@ program execution by using ventusky website
 """
 
 OWM_Endpoint = "https://api.openweathermap.org/data/2.5/onecall"
-api_key = "b9ad6228703cec607d616171ac62d624"  # Generated at the time of open weather map account creation.
-account_sid = "ACf90b5fa797f7c8c79515720599530f9c"  # Generated at the time of Twilio account creation
-auth_token = "5468ef40a3e68ce2b5625be2ba0ab303"  # Generated at the time of Twilio account creation
+api_key = "XXXX"  # Generated at the time of open weather map account creation.
+account_sid = "XXXX"  # Generated at the time of Twilio account creation
+auth_token = "XXXX"  # Generated at the time of Twilio account creation
 weather_parameters = {
     "lat": 39.214510,
     "lon": 29.869400,
@@ -25,7 +25,6 @@ weather_parameters = {
 }
 response = requests.get(url=OWM_Endpoint, params=weather_parameters)
 response.raise_for_status()
-
 
 """The other way is to use slicing"""
 weather_data = response.json()
@@ -44,8 +43,6 @@ if will_rain_in_next_12_hours:
     message = client.messages.create(
         body="Take an Umbrella it is going to rain in next 12 hours ☔☔",
         from_='+19793167486',
-        to='+447739912479'  # This should be a number that is verified in Twilio account
+        to='+44XXXXXXXXXX'  # This should be a number that is verified in Twilio account
     )
     print(message.status)
-
-
