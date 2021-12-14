@@ -2,8 +2,8 @@ import smtplib
 import datetime as dt
 import random
 
-sender_email = "emmathompson1505@gmail.com"
-password = "Emma@123"  # This is manually set gmail password. For yahoo we should use generated app password
+sender_email = "xxxx"
+password = "xxxx"  # This is manually set gmail password. For yahoo we should use generated app password
 recipient_email = "emma.clarin@yahoo.com"
 
 now = dt.datetime.now()

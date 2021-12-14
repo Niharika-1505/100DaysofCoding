@@ -1,7 +1,7 @@
 import smtplib
 
-sender_email = "emmathompson1505@gmail.com"
-password = "Emma@123"  # This is manually set gmail password. For yahoo we should use generated app password
+sender_email = "xxxx"
+password = "xxxx"  # This is manually set gmail password. For yahoo we should use generated app password
 recipient_email = "emma.clarin@yahoo.com"
 with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()  # This line makes the connection secure.

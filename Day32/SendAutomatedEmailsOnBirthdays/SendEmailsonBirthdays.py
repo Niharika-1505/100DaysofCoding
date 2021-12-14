@@ -3,8 +3,8 @@ import pandas
 import random
 import smtplib
 
-sender_email = "emmathompson1505@gmail.com"
-password = "Emma@123"  # This is manually set gmail password. For yahoo we should use generated app password
+sender_email = "xxxx"
+password = "xxxx"  # This is manually set gmail password. For yahoo we should use generated app password
 
 today = datetime.now()
 today_tuple = (today.month, today.day)
