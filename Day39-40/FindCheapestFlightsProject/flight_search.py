@@ -47,7 +47,7 @@ class FlightSearch:
                 params=query,
             )
             data = response.json()["data"][0]
-            print("From Flight_Search.py file")
+            print(f"No Direct flights found to {destination_city_code} From Flight_Search.py file")
             pprint(data)
             flight_data = FlightData(
                 price=data["price"],
