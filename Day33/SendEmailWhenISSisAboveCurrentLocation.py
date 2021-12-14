@@ -5,8 +5,8 @@ import time
 
 """https://www.latlong.net/"""
 # My Current Location BH13JS Latitude : 50.727960 Longitude: -1.834420
-sender_email = "emmathompson1505@gmail.com"
-password = "Emma@123"  # This is manually set gmail password. For yahoo we should use generated app password
+sender_email = "XXXX"
+password = "XXXX"  # This is manually set gmail password. For yahoo we should use generated app password
 recipient_email = "emma.clarin@yahoo.com"
 MY_LAT = 50.727960  # Your latitude
 MY_LONG = -1.834420  # Your longitude
