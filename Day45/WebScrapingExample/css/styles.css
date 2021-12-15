@@ -1,0 +1,16 @@
+/*Tag Selectors */
+ul {
+background-color: #FFC4E1
+}
+ol{
+background-color: #A8ECE7
+}
+
+/* Class Selectors , can be used multiple times*/
+.label{
+background-color: #98BAE7
+}
+/* ID selectors , id with a specific name can only be used once...if needed new id's can be created*/
+#textstyle{
+background-color: #F4BEEE
+}
