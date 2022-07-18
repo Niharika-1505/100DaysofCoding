@@ -1,6 +1,8 @@
 import numpy as np
 from numpy import cov
 
+# https://www.tutorialandexample.com/covariance-in-python#
+
 x = np.array([2, 3, 2.7, 3.2, 4.1])
 y = np.array([10, 14, 12, 15, 20])
 

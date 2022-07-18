@@ -1,5 +1,7 @@
 import numpy as np
 
+# https://realpython.com/numpy-scipy-pandas-correlation-python/
+
 x = np.array([41, 19, 23, 40, 55, 57, 33])
 y = np.array([94, 60, 74, 71, 82, 76, 61])
 
