@@ -28,8 +28,8 @@ for each_element in list_after_removing_ending_10_chars:
     data = " ".join(each_element.split())
     final_purchproList.append(data)
 
-# To write the List to DataFrame
+# Writing the List to DataFrame
 df = pd.DataFrame(final_purchproList)
 
-# To write the DataFrame to CSV
+# Writing the DataFrame to CSV
 df.to_csv("purchpro.csv", index=False)

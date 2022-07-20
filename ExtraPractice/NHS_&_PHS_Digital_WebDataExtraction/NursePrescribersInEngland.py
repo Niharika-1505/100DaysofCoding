@@ -16,7 +16,7 @@ soup = BeautifulSoup(html_contents, "html.parser")
 all_articles = soup.find(href=True, string="enurse")
 Url_to_download_zip = all_articles['href']
 
-# Write to CSV file after reading csv file from the zip folder
+# Write to CSV after reading the csv file from the zip folder
 response = urlopen(Url_to_download_zip)
 zipfile = ZipFile(BytesIO(response.read()))
 print(zipfile.namelist())
