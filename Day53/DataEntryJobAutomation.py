@@ -5,8 +5,9 @@ import time
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
 
+
 GOOGLE_FORMS_URL = "https://docs.google.com/forms/d/e/1FAIpQLSc5JqPVUBpn1EAK6TjG_hTNWvrwYHTQeyuDhQqNraNn10TMUg" \
-                   "/viewform?usp=sf_link "
+                   "/viewform?usp=sf_link"
 ZILLOW_URL = "https://www.zillow.com/homes/San-Francisco," \
              "-CA_rb/?searchQueryState=%7B%22pagination%22%3A%7B%7D%2C%22usersSearchTerm%22%3A%22San%20Francisco%2C" \
              "%20CA%22%2C%22mapBounds%22%3A%7B%22west%22%3A-122.55177535009766%2C%22east%22%3A-122.31488264990234%2C" \
@@ -41,9 +42,8 @@ def create_spreadsheet():
         submit_button = driver.find_element(By.XPATH, '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span/span')
         submit_button.click()
 
-
 header = {
-    "User-Agent": "Chrome/84.0.4147.125",
+    "User-Agent": "Chrome/103.0.5060.114",
     "Accept-Language": "en-GB,en-US;q=0.9,en;q=0.8"
 }
 
