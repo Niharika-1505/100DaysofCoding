@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Virtual Bookshelf - Add New Book{% endblock %}
+
+{% block content %}
+    <form action="" method="POST">
+        <table>
+            <tr>
+                <td><label>Book Name: </label></td>
+                <td><input type="text" placeholder="Title" name="title" required data-validation-required-message="Please enter a book title."></td>
+            </tr>
+            <tr>
+                <td><label>Book Author: </label></td>
+                <td><input type="text" placeholder="Author" name="author" required data-validation-required-message="Please enter an author."></td>
+            </tr>
+            <tr>
+                <td><label>Rating: </label></td>
+                <td><input type="text" placeholder="Rating" name="rating" required data-validation-required-message="Please enter a rating."></td>
+            </tr>
+            <tr><td><button type="submit">Add Book</button></td></tr>
+        </table>
+    </form>
+{% endblock %}

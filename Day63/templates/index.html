@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}Virtual Bookshelf{% endblock %}
+
+{% block content %}
+    <h1>My Library</h1>
+        {% if count > 0: %}
+            <table border='1' style='border-collapse:collapse'>
+                <thead>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Rating</th>
+                <th>Edit Rating</th>
+                <th>Delete Book</th>
+                </thead>
+                {% for book in books: %}
+                <tr>
+                    <td width="200px">{{ book['title'] }}</td>
+                    <td width="200px">{{ book['author'] }}</td>
+                    <td width="100px" align="center">{{ book['rating'] }}%</td>
+                    <td width="100px" align="center"><a href="{{ url_for('edit_rating', id=book['id']) }}">Edit</a></td>
+                    <td width="100px" align="center"><a href="{{ url_for('delete_book', id=book['id']) }}">Delete</a></td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="5" align="Center"><a href="{{ url_for('add_book') }}">Add New Book</a></td>
+                </tr>
+            </table>
+        {% else: %}
+            <p>The library is empty.</p>
+        {% endif %}
+{% endblock %}
