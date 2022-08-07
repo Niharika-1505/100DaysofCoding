@@ -12,7 +12,7 @@ data1 = [[1, 'Niha', 42000], [2, 'Karthik', 40000], [3, 'Ajay', 50000], [114, 'S
 df1 = pd.DataFrame(data1, columns=['ID', 'Name', 'Salary'])
 
 # create DataFrame2
-data2 = [[1, 'Niha', "GL51"], [80, 'Vasantha', "LS116"], [56, 'Sri', "E12"], [114, 'Sam', "BH1"]]
+data2 = [[1, 'Niha', "GL51"], [80, 'Vasanthas', "LS116"], [56, 'Sri', "E12"], [114, 'Sam', "BH1"]]
 df2 = pd.DataFrame(data2, columns=['ID', 'Name', 'Postcode_Sector'])
 
 # Use this if you want to merge both the data frame columns and then set status
