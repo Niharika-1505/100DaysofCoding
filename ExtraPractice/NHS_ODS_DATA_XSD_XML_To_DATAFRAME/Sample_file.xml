@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<HSCOrgRefData:OrgRefData xmlns:HSCOrgRefData="http://refdata.hscic.gov.uk/org/v2-0-0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://refdata.hscic.gov.uk/org/v2-0-0 HSCOrgRefData.xsd">
+  <Manifest>
+    <Version value="2-0-0" />
+    <PublicationType value="Full" />
+    <PublicationSource value="HSCIC" />
+    <PublicationDate value="2022-07-25" />
+    <PublicationSeqNum value="1755" />
+    <FileCreationDateTime value="2022-07-25T22:14:25" />
+    <RecordCount value="278411" />
+    <ContentDescription value="HSCOrgRefData_Full_20220725" />
+    <PrimaryRoleScope>
+      <PrimaryRole id="RO180" displayName="PRIMARY CARE TRUST SITE" />
+      <PrimaryRole id="RO198" displayName="NHS TRUST SITE" />
+      <PrimaryRole id="RO157" displayName="NON-NHS ORGANISATION" />
+      <PrimaryRole id="RO181" displayName="PHARMACY HEADQUARTER" />
+      <PrimaryRole id="RO191" displayName="SPECIAL HEALTH AUTHORITY SITE" />
+      <PrimaryRole id="RO96" displayName="BRANCH SURGERY" />
+      <PrimaryRole id="RO108" displayName="CARE TRUST SITE" />
+      <PrimaryRole id="RO175" displayName="PRISON" />
+      <PrimaryRole id="RO107" displayName="CARE TRUST" />
+      <PrimaryRole id="RO176" displayName="INDEPENDENT SECTOR H/C PROVIDER SITE" />
+      <PrimaryRole id="RO122" displayName="LOCAL AUTHORITY SITE - LEGACY" />
+      <PrimaryRole id="RO197" displayName="NHS TRUST" />
+      <PrimaryRole id="RO173" displayName="PATHOLOGY LAB" />
+      <PrimaryRole id="RO179" displayName="PRIMARY CARE TRUST" />
+      <PrimaryRole id="RO167" displayName="OPTICAL SITE" />
+      <PrimaryRole id="RO126" displayName="GOVERNMENT DEPARTMENT" />
+      <PrimaryRole id="RO177" displayName="PRESCRIBING COST CENTRE" />
+      <PrimaryRole id="RO166" displayName="OPTICAL HEADQUARTERS" />
+      <PrimaryRole id="RO161" displayName="NHS SUPPORT AGENCY" />
+      <PrimaryRole id="RO141" displayName="LOCAL AUTHORITY" />
+      <PrimaryRole id="RO200" displayName="WELSH ASSEMBLY" />
+      <PrimaryRole id="RO123" displayName="LOCAL AUTHORITY DEPARTMENT" />
+      <PrimaryRole id="RO172" displayName="INDEPENDENT SECTOR HEALTHCARE PROVIDER" />
+      <PrimaryRole id="RO142" displayName="LOCAL HEALTH BOARD" />
+      <PrimaryRole id="RO146" displayName="LOCAL SERVICE PROVIDER (LSP)" />
+      <PrimaryRole id="RO137" displayName="ISLE OF MAN GOVERNMENT DIRECTORATE" />
+      <PrimaryRole id="RO140" displayName="ISLE OF MAN GOVERNMENT DIRECTORATE SITE" />
+      <PrimaryRole id="RO148" displayName="LOCAL HEALTH BOARD SITE" />
+      <PrimaryRole id="RO150" displayName="MILITARY HOSPITAL" />
+      <PrimaryRole id="RO93" displayName="APPLICATION SERVICE PROVIDER - LEGACY" />
+      <PrimaryRole id="RO110" displayName="GENERAL DENTAL PRACTICE" />
+      <PrimaryRole id="RO105" displayName="CANCER REGISTRY" />
+      <PrimaryRole id="RO128" displayName="GOVERNMENT OFFICE REGION" />
+      <PrimaryRole id="RO189" displayName="SPECIAL HEALTH AUTHORITY (SPHA)" />
+      <PrimaryRole id="RO92" displayName="APPLICATION SERVICE PROVIDER" />
+      <PrimaryRole id="RO117" displayName="EDUCATION" />
+      <PrimaryRole id="RO119" displayName="LOCAL AUTHORITY - LEGACY" />
+      <PrimaryRole id="RO132" displayName="HEALTH AUTHORITY (HA)" />
+      <PrimaryRole id="RO138" displayName="ISLE OF MAN GOVERNMENT DEPARTMENT" />
+      <PrimaryRole id="RO91" displayName="EXECUTIVE AGENCY PROGRAMME" />
+      <PrimaryRole id="RO134" displayName="HEALTH OBSERVATORY" />
+      <PrimaryRole id="RO158" displayName="NON STATUTORY NHS ORGANISATION" />
+      <PrimaryRole id="RO159" displayName="NATIONAL APPLICATION SERVICE PROVIDER" />
+      <PrimaryRole id="RO89" displayName="EXECUTIVE AGENCY PROGRAMME - DEPARTMENT" />
+      <PrimaryRole id="RO131" displayName="GOVERNMENT DEPARTMENT SITE" />
+      <PrimaryRole id="RO147" displayName="LSP SITE" />
+      <PrimaryRole id="RO116" displayName="EXECUTIVE AGENCY" />
+      <PrimaryRole id="RO154" displayName="NORTHERN IRELAND HEALTH AND SOCIAL CARE TRUST" />
+      <PrimaryRole id="RO162" displayName="OTHER STATUTORY AUTHORITY (OSA)" />
+      <PrimaryRole id="RO103" displayName="CANCER NETWORK" />
+      <PrimaryRole id="RO102" displayName="CLINICAL NETWORK" />
+      <PrimaryRole id="RO185" displayName="REGIONAL OFFICE (RO)" />
+      <PrimaryRole id="RO153" displayName="NORTHERN IRELAND HEALTH &amp; SOCIAL CARE BOARD" />
+      <PrimaryRole id="RO90" displayName="EXECUTIVE AGENCY SITE" />
+      <PrimaryRole id="RO136" displayName="STRATEGIC HEALTH AUTHORITY SITE" />
+      <PrimaryRole id="RO155" displayName="NORTHERN IRELAND LOCAL COMMISSIONING GROUP" />
+      <PrimaryRole id="RO98" displayName="CLINICAL COMMISSIONING GROUP" />
+      <PrimaryRole id="RO168" displayName="OTHER STATUTORY AUTHORITY SITE" />
+      <PrimaryRole id="RO210" displayName="NHS ENGLAND (REGION, LOCAL OFFICE)" />
+      <PrimaryRole id="RO209" displayName="NHS ENGLAND (REGION)" />
+      <PrimaryRole id="RO213" displayName="COMMISSIONING SUPPORT UNIT" />
+      <PrimaryRole id="RO99" displayName="CLINICAL COMMISSIONING GROUP SITE" />
+      <PrimaryRole id="RO214" displayName="COMMISSIONING SUPPORT UNIT SITE" />
+      <PrimaryRole id="RO216" displayName="DATA SERVICES FOR COMMISSIONERS REGIONAL OFFICE (DSCRO)" />
+      <PrimaryRole id="RO222" displayName="LOCAL AUTHORITY SITE" />
+      <PrimaryRole id="RO212" displayName="NHS ENGLAND (REGION, LOCAL OFFICE) SITE" />
+      <PrimaryRole id="RO217" displayName="DSCRO SITE" />
+      <PrimaryRole id="RO230" displayName="SECURE TRAINING CENTRE" />
+      <PrimaryRole id="RO231" displayName="SECURE CHILDREN'S HOME" />
+      <PrimaryRole id="RO235" displayName="COURT" />
+      <PrimaryRole id="RO234" displayName="POLICE CUSTODY SUITE" />
+      <PrimaryRole id="RO233" displayName="CONSTABULARY" />
+      <PrimaryRole id="RO228" displayName="YOUNG OFFENDER INSTITUTION" />
+      <PrimaryRole id="RO232" displayName="IMMIGRATION REMOVAL CENTRE" />
+      <PrimaryRole id="RO182" displayName="PHARMACY" />
+      <PrimaryRole id="RO104" displayName="SOCIAL CARE PROVIDER" />
+      <PrimaryRole id="RO101" displayName="SOCIAL CARE SITE" />
+      <PrimaryRole id="RO94" displayName="APPLIANCE CONTRACTOR" />
+      <PrimaryRole id="RO236" displayName="SEXUAL ASSAULT REFERRAL CENTRE" />
+      <PrimaryRole id="RO261" displayName="STRATEGIC PARTNERSHIP" />
+      <PrimaryRole id="RO272" displayName="PRIMARY CARE NETWORK" />
+      <PrimaryRole id="RO280" displayName="PHARMACY SITE" />
+      <PrimaryRole id="RO221" displayName="SCHOOL" />
+      <PrimaryRole id="RO315" displayName="NORTHERN IRELAND GP PRACTICE" />
+    </PrimaryRoleScope>
+  </Manifest>
+  <CodeSystems>
+    <CodeSystem name="OrganisationRecordClass" oid="2.16.840.1.113883.2.1.3.2.4.23">
+      <concept id="RC2" code="2" displayName="HSCSite" />
+      <concept id="RC1" code="1" displayName="HSCOrg" />
+    </CodeSystem>
+    <CodeSystem name="OrganisationRole" oid="2.16.840.1.113883.2.1.3.2.4.17.507">
+      <concept id="RO179" code="179" displayName="PRIMARY CARE TRUST" />
+      <concept id="RO180" code="180" displayName="PRIMARY CARE TRUST SITE" />
+      <concept id="RO197" code="197" displayName="NHS TRUST" />
+      <concept id="RO198" code="198" displayName="NHS TRUST SITE" />
+      <concept id="RO114" code="114" displayName="DMU SITE" />
+      <concept id="RO132" code="132" displayName="HEALTH AUTHORITY (HA)" />
+      <concept id="RO210" code="210" displayName="NHS ENGLAND (REGION, LOCAL OFFICE)" />
+      <concept id="RO261" code="261" displayName="STRATEGIC PARTNERSHIP" />
+      <concept id="RO157" code="157" displayName="NON-NHS ORGANISATION" />
+      <concept id="RO15" code="15" displayName="REG'D UNDER PART 2 CARE STDS ACT 2000" />
+      <concept id="RO7" code="7" displayName="HOSPICE" />
+      <concept id="RO181" code="181" displayName="PHARMACY HEADQUARTER" />
+      <concept id="RO189" code="189" displayName="SPECIAL HEALTH AUTHORITY (SPHA)" />
+      <concept id="RO191" code="191" displayName="SPECIAL HEALTH AUTHORITY SITE" />
+      <concept id="RO177" code="177" displayName="PRESCRIBING COST CENTRE" />
+      <concept id="RO96" code="96" displayName="BRANCH SURGERY" />
+      <concept id="RO107" code="107" displayName="CARE TRUST" />
+      <concept id="RO108" code="108" displayName="CARE TRUST SITE" />
+      <concept id="RO175" code="175" displayName="PRISON" />
+      <concept id="RO24" code="24" displayName="NHS TRUST DERIVED" />
+      <concept id="RO57" code="57" displayName="FOUNDATION TRUST" />
+      <concept id="RO172" code="172" displayName="INDEPENDENT SECTOR HEALTHCARE PROVIDER" />
+      <concept id="RO176" code="176" displayName="INDEPENDENT SECTOR H/C PROVIDER SITE" />
+      <concept id="RO119" code="119" displayName="LOCAL AUTHORITY - LEGACY" />
+      <concept id="RO122" code="122" displayName="LOCAL AUTHORITY SITE - LEGACY" />
+      <concept id="RO142" code="142" displayName="LOCAL HEALTH BOARD" />
+      <concept id="RO144" code="144" displayName="WELSH LOCAL HEALTH BOARD" />
+      <concept id="RO173" code="173" displayName="PATHOLOGY LAB" />
+      <concept id="RO31" code="31" displayName="PPA EPACT SYSTEM" />
+      <concept id="RO29" code="29" displayName="TREATMENT CENTRE" />
+      <concept id="RO268" code="268" displayName="MEDICINE SUPPLIER" />
+      <concept id="RO22" code="22" displayName="LEVEL 04 PCT" />
+      <concept id="RO166" code="166" displayName="OPTICAL HEADQUARTERS" />
+      <concept id="RO167" code="167" displayName="OPTICAL SITE" />
+      <concept id="RO126" code="126" displayName="GOVERNMENT DEPARTMENT" />
+      <concept id="RO171" code="171" displayName="PRIMARY CARE GROUP" />
+      <concept id="RO98" code="98" displayName="CLINICAL COMMISSIONING GROUP" />
+      <concept id="RO272" code="272" displayName="PRIMARY CARE NETWORK" />
+      <concept id="RO76" code="76" displayName="GP PRACTICE" />
+      <concept id="RO109" code="109" displayName="DISTRICT HEALTH AUTHORITY (DHA)" />
+      <concept id="RO111" code="111" displayName="DIRECTLY MANAGED UNIT (DMU)" />
+      <concept id="RO222" code="222" displayName="LOCAL AUTHORITY SITE" />
+      <concept id="RO161" code="161" displayName="NHS SUPPORT AGENCY" />
+      <concept id="RO72" code="72" displayName="OTHER PRESCRIBING COST CENTRE" />
+      <concept id="RO141" code="141" displayName="LOCAL AUTHORITY" />
+      <concept id="RO40" code="40" displayName="UNITARY AUTHORITY" />
+      <concept id="RO33" code="33" displayName="COUNTY COUNCIL" />
+      <concept id="RO185" code="185" displayName="REGIONAL OFFICE (RO)" />
+      <concept id="RO200" code="200" displayName="WELSH ASSEMBLY" />
+      <concept id="RO123" code="123" displayName="LOCAL AUTHORITY DEPARTMENT" />
+      <concept id="RO91" code="91" displayName="EXECUTIVE AGENCY PROGRAMME" />
+      <concept id="RO209" code="209" displayName="NHS ENGLAND (REGION)" />
+      <concept id="RO146" code="146" displayName="LOCAL SERVICE PROVIDER (LSP)" />
+      <concept id="RO138" code="138" displayName="ISLE OF MAN GOVERNMENT DEPARTMENT" />
+      <concept id="RO137" code="137" displayName="ISLE OF MAN GOVERNMENT DIRECTORATE" />
+      <concept id="RO140" code="140" displayName="ISLE OF MAN GOVERNMENT DIRECTORATE SITE" />
+      <concept id="RO90" code="90" displayName="EXECUTIVE AGENCY SITE" />
+      <concept id="RO148" code="148" displayName="LOCAL HEALTH BOARD SITE" />
+      <concept id="RO247" code="247" displayName="COMMUNITY HEALTH SERVICE PRESCRIBING COST CENTRE" />
+      <concept id="RO246" code="246" displayName="CARE HOME/NURSING HOME PRESCRIBING COST CENTRE" />
+      <concept id="RO80" code="80" displayName="OUT OF HOURS COST CENTRE" />
+      <concept id="RO255" code="255" displayName="PUBLIC HEALTH SERVICE PRESCRIBING COST CENTRE" />
+      <concept id="RO259" code="259" displayName="URGENT &amp; EMERGENCY CARE PRESCRIBING COST CENTRE" />
+      <concept id="RO249" code="249" displayName="HOSPICE PRESCRIBING COST CENTRE" />
+      <concept id="RO250" code="250" displayName="HOSPITAL SERVICE PRESCRIBING COST CENTRE" />
+      <concept id="RO87" code="87" displayName="WALK IN CENTRE" />
+      <concept id="RO21" code="21" displayName="LEVEL 03 PCT" />
+      <concept id="RO92" code="92" displayName="APPLICATION SERVICE PROVIDER" />
+      <concept id="RO106" code="106" displayName="COMMON SERVICE AGENCY (CSA)" />
+      <concept id="RO25" code="25" displayName="PCT DERIVED" />
+      <concept id="RO150" code="150" displayName="MILITARY HOSPITAL" />
+      <concept id="RO93" code="93" displayName="APPLICATION SERVICE PROVIDER - LEGACY" />
+      <concept id="RO149" code="149" displayName="WELSH LOCAL HEALTH BOARD SITE" />
+      <concept id="RO82" code="82" displayName="PRISON PRESCRIBING COST CENTRE" />
+      <concept id="RO65" code="65" displayName="PRIVATE DENTAL PRACTICE" />
+      <concept id="RO110" code="110" displayName="GENERAL DENTAL PRACTICE" />
+      <concept id="RO105" code="105" displayName="CANCER REGISTRY" />
+      <concept id="RO11" code="11" displayName="LA - METROPOLITAN DISTRICT" />
+      <concept id="RO37" code="37" displayName="METROPOLITAN DISTRICT" />
+      <concept id="RO12" code="12" displayName="LA - INNER LONDON" />
+      <concept id="RO223" code="223" displayName="LONDON BOROUGH" />
+      <concept id="RO128" code="128" displayName="GOVERNMENT OFFICE REGION" />
+      <concept id="RO252" code="252" displayName="OPTOMETRY SERVICE PRESCRIBING COST CENTRE" />
+      <concept id="RO67" code="67" displayName="SPECIALISED COMMISSIONING GROUP" />
+      <concept id="RO30" code="30" displayName="RESEARCH AND DEVELOPMENT" />
+      <concept id="RO162" code="162" displayName="OTHER STATUTORY AUTHORITY (OSA)" />
+      <concept id="RO71" code="71" displayName="PRIVATELY OWNED ENTITY" />
+      <concept id="RO116" code="116" displayName="EXECUTIVE AGENCY" />
+      <concept id="RO117" code="117" displayName="EDUCATION" />
+      <concept id="RO36" code="36" displayName="DISTRICT COUNCIL" />
+      <concept id="RO34" code="34" displayName="BOROUGH COUNCIL" />
+      <concept id="RO39" code="39" displayName="METROPOLITAN DISTRICT COUNCIL" />
+      <concept id="RO35" code="35" displayName="CITY COUNCIL" />
+      <concept id="RO134" code="134" displayName="HEALTH OBSERVATORY" />
+      <concept id="RO158" code="158" displayName="NON STATUTORY NHS ORGANISATION" />
+      <concept id="RO159" code="159" displayName="NATIONAL APPLICATION SERVICE PROVIDER" />
+      <concept id="RO89" code="89" displayName="EXECUTIVE AGENCY PROGRAMME - DEPARTMENT" />
+      <concept id="RO316" code="316" displayName="SPECIAL SCHOOLS EYE CARE SERVICE PROVIDER" />
+      <concept id="RO131" code="131" displayName="GOVERNMENT DEPARTMENT SITE" />
+      <concept id="RO147" code="147" displayName="LSP SITE" />
+      <concept id="RO38" code="38" displayName="COUNCIL" />
+      <concept id="RO154" code="154" displayName="NORTHERN IRELAND HEALTH AND SOCIAL CARE TRUST" />
+      <concept id="RO103" code="103" displayName="CANCER NETWORK" />
+      <concept id="RO267" code="267" displayName="EXTENDED ACCESS HUB" />
+      <concept id="RO102" code="102" displayName="CLINICAL NETWORK" />
+      <concept id="RO153" code="153" displayName="NORTHERN IRELAND HEALTH &amp; SOCIAL CARE BOARD" />
+      <concept id="RO266" code="266" displayName="EXTENDED ACCESS PROVIDER" />
+      <concept id="RO69" code="69" displayName="IMMIGRATION REMOVAL CENTRE" />
+      <concept id="RO136" code="136" displayName="STRATEGIC HEALTH AUTHORITY SITE" />
+      <concept id="RO155" code="155" displayName="NORTHERN IRELAND LOCAL COMMISSIONING GROUP" />
+      <concept id="RO319" code="319" displayName="SUB ICB LOCATION" />
+      <concept id="RO168" code="168" displayName="OTHER STATUTORY AUTHORITY SITE" />
+      <concept id="RO211" code="211" displayName="SPECIALISED COMMISSIONING HUB" />
+      <concept id="RO218" code="218" displayName="COMMISSIONING HUB" />
+      <concept id="RO213" code="213" displayName="COMMISSIONING SUPPORT UNIT" />
+      <concept id="RO215" code="215" displayName="HOSTS DATA MANAGMENT INTEGRATION CENTRE (DMIC)" />
+      <concept id="RO99" code="99" displayName="CLINICAL COMMISSIONING GROUP SITE" />
+      <concept id="RO214" code="214" displayName="COMMISSIONING SUPPORT UNIT SITE" />
+      <concept id="RO216" code="216" displayName="DATA SERVICES FOR COMMISSIONERS REGIONAL OFFICE (DSCRO)" />
+      <concept id="RO212" code="212" displayName="NHS ENGLAND (REGION, LOCAL OFFICE) SITE" />
+      <concept id="RO220" code="220" displayName="SECURE TRAINING CENTRE" />
+      <concept id="RO217" code="217" displayName="DSCRO SITE" />
+      <concept id="RO83" code="83" displayName="RESIDENTIAL INSTITUTION" />
+      <concept id="RO230" code="230" displayName="SECURE TRAINING CENTRE" />
+      <concept id="RO231" code="231" displayName="SECURE CHILDREN'S HOME" />
+      <concept id="RO229" code="229" displayName="NON RESIDENTIAL INSTITUTION" />
+      <concept id="RO235" code="235" displayName="COURT" />
+      <concept id="RO233" code="233" displayName="CONSTABULARY" />
+      <concept id="RO234" code="234" displayName="POLICE CUSTODY SUITE" />
+      <concept id="RO260" code="260" displayName="YOUNG OFFENDER INSTITUTION PRESCRIBING COST CENTRE" />
+      <concept id="RO228" code="228" displayName="YOUNG OFFENDER INSTITUTION" />
+      <concept id="RO232" code="232" displayName="IMMIGRATION REMOVAL CENTRE" />
+      <concept id="RO182" code="182" displayName="PHARMACY" />
+      <concept id="RO104" code="104" displayName="SOCIAL CARE PROVIDER" />
+      <concept id="RO101" code="101" displayName="SOCIAL CARE SITE" />
+      <concept id="RO269" code="269" displayName="CARE HOME" />
+      <concept id="RO270" code="270" displayName="DOMICILIARY CARE" />
+      <concept id="RO94" code="94" displayName="APPLIANCE CONTRACTOR" />
+      <concept id="RO251" code="251" displayName="IMMIGRATION REMOVAL CENTRE PRESCRIBING COST CENTRE" />
+      <concept id="RO256" code="256" displayName="SECURE CHILDREN'S HOME PRESCRIBING COST CENTRE" />
+      <concept id="RO236" code="236" displayName="SEXUAL ASSAULT REFERRAL CENTRE" />
+      <concept id="RO257" code="257" displayName="SECURE TRAINING CENTRE PRESCRIBING COST CENTRE" />
+      <concept id="RO258" code="258" displayName="SEXUAL ASSAULT REFERRAL CENTRE PRESCRIBING COST CE" />
+      <concept id="RO262" code="262" displayName="SUSTAINABILITY TRANSFORMATION PARTNERSHIP" />
+      <concept id="RO318" code="318" displayName="INTEGRATED CARE BOARD" />
+      <concept id="RO273" code="273" displayName="COMBINED AUTHORITY" />
+      <concept id="RO274" code="274" displayName="LOCAL HEALTH AND CARE RECORD EXEMPLAR" />
+      <concept id="RO279" code="279" displayName="COVID VACCINATION CENTRE" />
+      <concept id="RO275" code="275" displayName="SMHPC - CYPMHS TIER 4" />
+      <concept id="RO277" code="277" displayName="SMHPC - ADULT SECURE SERVICES" />
+      <concept id="RO276" code="276" displayName="SMHPC - ADULT EATING DISORDERS" />
+      <concept id="RO280" code="280" displayName="PHARMACY SITE" />
+      <concept id="RO221" code="221" displayName="SCHOOL" />
+      <concept id="RO289" code="289" displayName="OTHER INDEPENDENT SCHOOL" />
+      <concept id="RO288" code="288" displayName="OTHER INDEPENDENT SPECIAL SCHOOL" />
+      <concept id="RO286" code="286" displayName="COMMUNITY SPECIAL SCHOOL" />
+      <concept id="RO291" code="291" displayName="PUPIL REFERRAL UNIT" />
+      <concept id="RO281" code="281" displayName="COMMUNITY SCHOOL" />
+      <concept id="RO292" code="292" displayName="LOCAL AUTHORITY NURSERY SCHOOL" />
+      <concept id="RO282" code="282" displayName="VOLUNTARY AIDED SCHOOL" />
+      <concept id="RO290" code="290" displayName="FOUNDATION SPECIAL SCHOOL" />
+      <concept id="RO284" code="284" displayName="FOUNDATION SCHOOL" />
+      <concept id="RO287" code="287" displayName="NON-MAINTAINED SPECIAL SCHOOL" />
+      <concept id="RO283" code="283" displayName="VOLUNTARY CONTROLLED SCHOOL" />
+      <concept id="RO285" code="285" displayName="CITY TECHNOLOGY COLLEGE" />
+      <concept id="RO297" code="297" displayName="ACADEMY SPONSOR LED" />
+      <concept id="RO293" code="293" displayName="FURTHER EDUCATION" />
+      <concept id="RO299" code="299" displayName="SIXTH FORM CENTRES" />
+      <concept id="RO296" code="296" displayName="MISCELLANEOUS" />
+      <concept id="RO300" code="300" displayName="SPECIAL POST 16 INSTITUTION" />
+      <concept id="RO294" code="294" displayName="SECURE UNITS" />
+      <concept id="RO298" code="298" displayName="HIGHER EDUCATION INSTITUTIONS" />
+      <concept id="RO314" code="314" displayName="INSTITUTION FUNDED BY OTHER GOVERNMENT DEPARTMENT" />
+      <concept id="RO302" code="302" displayName="ACADEMY CONVERTER" />
+      <concept id="RO311" code="311" displayName="ACADEMY SPECIAL CONVERTER" />
+      <concept id="RO301" code="301" displayName="ACADEMY SPECIAL SPONSOR LED" />
+      <concept id="RO307" code="307" displayName="UNIVERSITY TECHNICAL COLLEGE" />
+      <concept id="RO309" code="309" displayName="ACADEMY ALTERNATIVE PROVISION CONVERTER" />
+      <concept id="RO313" code="313" displayName="ACADEMY 16 TO 19 SPONSOR LED" />
+      <concept id="RO303" code="303" displayName="FREE SCHOOLS" />
+      <concept id="RO304" code="304" displayName="FREE SCHOOLS SPECIAL" />
+      <concept id="RO310" code="310" displayName="ACADEMY ALTERNATIVE PROVISION SPONSOR LED" />
+      <concept id="RO305" code="305" displayName="FREE SCHOOLS ALTERNATIVE PROVISION" />
+      <concept id="RO306" code="306" displayName="FREE SCHOOLS 16 TO 19" />
+      <concept id="RO308" code="308" displayName="STUDIO SCHOOLS" />
+      <concept id="RO312" code="312" displayName="ACADEMY 16-19 CONVERTER" />
+      <concept id="RO315" code="315" displayName="NORTHERN IRELAND GP PRACTICE" />
+      <concept id="RO317" code="317" displayName="COMMUNITY DIAGNOSTIC CENTRE" />
+    </CodeSystem>
+    <CodeSystem name="OrganisationRelationship" oid="2.16.840.1.113883.2.1.3.2.4.17.508">
+      <concept id="RE6" code="6" displayName="IS OPERATED BY" />
+      <concept id="RE5" code="5" displayName="IS LOCATED IN THE GEOGRAPHY OF" />
+      <concept id="RE4" code="4" displayName="IS COMMISSIONED BY" />
+      <concept id="RE3" code="3" displayName="IS DIRECTED BY" />
+      <concept id="RE8" code="8" displayName="IS PARTNER TO" />
+      <concept id="RE9" code="9" displayName="IS NOMINATED PAYEE FOR" />
+      <concept id="RE10" code="10" displayName="IS COVID NOMINATED PAYEE FOR" />
+      <concept id="RE2" code="2" displayName="IS A SUB-DIVISION OF" />
+    </CodeSystem>
+  </CodeSystems>
+  <Organisations>
+    <Organisation orgRecordClass="RC2">
+    <Name>EASTNEY HEALTH CENTRE</Name>
+    <Date>
+      <Type value="Legal" />
+      <Start value="2006-10-01" />
+      <End value="2013-03-31" />
+    </Date>
+    <Date>
+      <Type value="Operational" />
+      <Start value="2006-10-01" />
+    </Date>
+    <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5QCAH" />
+    <Status value="Active" />
+    <LastChangeDate value="2021-03-26" />
+    <GeoLoc>
+      <Location>
+        <AddrLn1>HIGHLAND ROAD</AddrLn1>
+        <Town>SOUTHSEA</Town>
+        <County>HAMPSHIRE</County>
+        <PostCode>PO4 9HU</PostCode>
+        <Country>ENGLAND</Country>
+        <UPRN>1775039729</UPRN>
+      </Location>
+    </GeoLoc>
+    <Roles>
+      <Role id="RO180" uniqueRoleId="5785" primaryRole="true">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+          <End value="2013-03-31" />
+        </Date>
+        <Date>
+          <Type value="Operational" />
+          <Start value="2006-10-01" />
+        </Date>
+        <Status value="Active" />
+      </Role>
+    </Roles>
+    <Rels>
+      <Rel id="RE6" uniqueRelId="178089">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+          <End value="2013-03-31" />
+        </Date>
+        <Date>
+          <Type value="Operational" />
+          <Start value="2006-10-01" />
+          <End value="2020-09-30" />
+        </Date>
+        <Status value="Inactive" />
+        <Target>
+          <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5QC" />
+          <PrimaryRoleId id="RO179" uniqueRoleId="137676" />
+        </Target>
+      </Rel>
+    </Rels>
+    <Succs>
+      <Succ uniqueSuccId="171">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+        </Date>
+        <Type>Predecessor</Type>
+        <Target>
+          <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5FD51" />
+          <PrimaryRoleId id="RO180" uniqueRoleId="44844" />
+        </Target>
+      </Succ>
+    </Succs>
+  </Organisation>
+    <Organisation orgRecordClass="RC2">
+    <Name>MERLIN CENTRE</Name>
+    <Date>
+      <Type value="Legal" />
+      <Start value="2006-10-01" />
+      <End value="2013-03-31" />
+    </Date>
+    <Date>
+      <Type value="Operational" />
+      <Start value="2006-10-01" />
+    </Date>
+    <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5QCAJ" />
+    <Status value="Active" />
+    <LastChangeDate value="2021-03-26" />
+    <GeoLoc>
+      <Location>
+        <AddrLn1>VILLIERS ROAD</AddrLn1>
+        <Town>SOUTHSEA</Town>
+        <County>HAMPSHIRE</County>
+        <PostCode>PO5 2HG</PostCode>
+        <Country>ENGLAND</Country>
+      </Location>
+    </GeoLoc>
+    <Roles>
+      <Role id="RO180" uniqueRoleId="5786" primaryRole="true">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+          <End value="2013-03-31" />
+        </Date>
+        <Date>
+          <Type value="Operational" />
+          <Start value="2006-10-01" />
+        </Date>
+        <Status value="Active" />
+      </Role>
+    </Roles>
+    <Rels>
+      <Rel id="RE6" uniqueRelId="177836">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+          <End value="2013-03-31" />
+        </Date>
+        <Date>
+          <Type value="Operational" />
+          <Start value="2006-10-01" />
+          <End value="2020-09-30" />
+        </Date>
+        <Status value="Inactive" />
+        <Target>
+          <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5QC" />
+          <PrimaryRoleId id="RO179" uniqueRoleId="137676" />
+        </Target>
+      </Rel>
+    </Rels>
+    <Succs>
+      <Succ uniqueSuccId="1064">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+        </Date>
+        <Type>Predecessor</Type>
+        <Target>
+          <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5FD54" />
+          <PrimaryRoleId id="RO180" uniqueRoleId="44845" />
+        </Target>
+      </Succ>
+    </Succs>
+  </Organisation>
+    <Organisation orgRecordClass="RC2">
+    <Name>BATTENBURG AVENUE CLINIC</Name>
+    <Date>
+      <Type value="Legal" />
+      <Start value="2006-10-01" />
+      <End value="2013-03-31" />
+    </Date>
+    <Date>
+      <Type value="Operational" />
+      <Start value="2006-10-01" />
+    </Date>
+    <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5QCAK" />
+    <Status value="Active" />
+    <LastChangeDate value="2021-03-26" />
+    <GeoLoc>
+      <Location>
+        <AddrLn1>BATTENBURG AVENUE</AddrLn1>
+        <Town>PORTSMOUTH</Town>
+        <County>HAMPSHIRE</County>
+        <PostCode>PO2 0TA</PostCode>
+        <Country>ENGLAND</Country>
+        <UPRN>1775099216</UPRN>
+      </Location>
+    </GeoLoc>
+    <Roles>
+      <Role id="RO180" uniqueRoleId="5787" primaryRole="true">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+          <End value="2013-03-31" />
+        </Date>
+        <Date>
+          <Type value="Operational" />
+          <Start value="2006-10-01" />
+        </Date>
+        <Status value="Active" />
+      </Role>
+    </Roles>
+    <Rels>
+      <Rel id="RE6" uniqueRelId="177889">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+          <End value="2013-03-31" />
+        </Date>
+        <Date>
+          <Type value="Operational" />
+          <Start value="2006-10-01" />
+          <End value="2020-09-30" />
+        </Date>
+        <Status value="Inactive" />
+        <Target>
+          <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5QC" />
+          <PrimaryRoleId id="RO179" uniqueRoleId="137676" />
+        </Target>
+      </Rel>
+    </Rels>
+    <Succs>
+      <Succ uniqueSuccId="2658">
+        <Date>
+          <Type value="Legal" />
+          <Start value="2006-10-01" />
+        </Date>
+        <Type>Predecessor</Type>
+        <Target>
+          <OrgId root="2.16.840.1.113883.2.1.3.2.4.18.48" assigningAuthorityName="HSCIC" extension="5FD55" />
+          <PrimaryRoleId id="RO180" uniqueRoleId="44846" />
+        </Target>
+      </Succ>
+    </Succs>
+  </Organisation>
+ </Organisations>
+</HSCOrgRefData:OrgRefData>

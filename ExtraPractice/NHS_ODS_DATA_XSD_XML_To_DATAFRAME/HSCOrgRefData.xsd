@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://refdata.hscic.gov.uk/org/v2-0-0" id="HSCOrgRefData" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://refdata.hscic.gov.uk/org/v2-0-0" xmlns:HSCOrgRefData="http://refdata.hscic.gov.uk/org/v2-0-0">
+<!-- Schema version: v2-0-0
+Status: Live
+Author: HSCIC
+Contact: exeter.helpdesk@nhs.net
+Release Date: 2017-15-02
+Project: HSCOrgRefData
+Internal Ref: V1.0
+Copyright Health and Social Care Information Centre (c) 2017 -->
+	<xs:element name="OrgRefData" type="OrgType">
+		<xs:annotation>
+			<xs:documentation>This is the root element of the XML document.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<xs:complexType name="OrgType">
+		<xs:annotation>
+			<xs:documentation>Container for the Manifest, CodeSystems and Payload.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Manifest" type="OrgManifestType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="CodeSystems" type="CodeSystemsType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Organisations" type="OrgOrganisationsType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrgManifestType">
+		<xs:annotation>
+			<xs:documentation>Manifest occurs once at the top of the file and describes the content.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Version" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PublicationType" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PublicationSource" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PublicationDate" type="ValDateType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PublicationSeqNum" type="ValMaxStrLen25" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="FileCreationDateTime" type="ValTimestampType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="FileExpiryDate" type="ValDateType" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="RecordCount" type="ValDeciNoFrac" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="ContentDescription" type="ValMaxStrLen100" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PrimaryRoleScope" type="PrimaryRoleScopeType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PrimaryRoleScopeType">
+		<xs:annotation>
+			<xs:documentation>List of Primary Roles for subject records in this file.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PrimaryRole" type="PrimaryRoleType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PrimaryRoleType">
+		<xs:annotation>
+			<xs:documentation>An entry exists for each Role which is in scope for a given document.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="id" use="required" type="xs:IDREF"/>
+		<xs:attribute name="displayName" use="required" type="maxStrLen100"/>
+	</xs:complexType>
+	<xs:complexType name="CodeSystemsType">
+		<xs:annotation>
+			<xs:documentation>CodeSystems defined here and referenced from subject records in the payload.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence minOccurs="1" maxOccurs="1">
+			<xs:element name="CodeSystem" type="CodeSystemType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="CodeSystemType">
+		<xs:annotation>
+			<xs:documentation>Each CodeSystem collection has its own section.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="concept" type="ConceptType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="name" use="required" type="maxStrLen50"/>
+		<xs:attribute name="oid" use="required" type="oidStrLen50"/>
+	</xs:complexType>
+	<xs:complexType name="ConceptType">
+		<xs:annotation>
+			<xs:documentation>Each entry is an instance of a particular CodeSystem.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="id" use="required" type="xs:ID"/>
+		<xs:attribute name="code" use="required" type="maxStrLen12"/>
+		<xs:attribute name="displayName" use="required" type="maxStrLen100"/>
+	</xs:complexType>
+	<xs:complexType name="OrgOrganisationsType">
+		<xs:annotation>
+			<xs:documentation>Container for Organisation records in the payload.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Organisation" type="OrgOrganisationType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrgOrganisationType">
+		<xs:annotation>
+			<xs:documentation>An entry for each Organisation entity in the payload.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Name" type="maxStrLen100" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Date" type="DateIVLValueType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="OrgId" type="II" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="OtherId" type="II" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+			<xs:element name="Status" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="LastChangeDate" type="ValDateType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="GeoLoc" type="GeoLocType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Contacts" type="OrgContactsType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Roles" type="OrgRolesType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Rels" type="OrgRelsType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Succs" type="OrgSuccsType" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="AdditionalAttributes" type="OrgAdditionalAttributesType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="refOnly" use="optional" type="xs:boolean"/>
+		<xs:attribute name="orgRecordClass" use="required" type="xs:IDREF"/>
+	</xs:complexType>
+	<xs:complexType name="OrgRelsType">
+		<xs:annotation>
+			<xs:documentation>All relations for given entity are held here (optional) but if the container is present, one or more Relationship entries must be present.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Rel" type="OrgRelType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrgRelType">
+		<xs:annotation>
+			<xs:documentation>Any relationships for an entity are listed here including information about the target entity.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Date" type="DateIVLValueType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="Status" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Target" type="TargetType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="id" use="required" type="xs:IDREF"/>
+		<xs:attribute name="uniqueRelId" use="optional" type="deciNoFrac"/>
+		<xs:attribute name="derived" use="optional" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="TargetType">
+		<xs:annotation>
+			<xs:documentation>Contains information about the target entity for a given relationship.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="OrgId" type="II" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="PrimaryRoleId" type="TargetRoleIDType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TargetRoleIDType">
+		<xs:annotation>
+			<xs:documentation>The Primary Role of a target entity (may not conform to the list in Primary Role Scope but will comply with those listed in the OrganisationRoles CodeSystemsType).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="id" use="required" type="xs:IDREF"/>
+		<xs:attribute name="uniqueRoleId" use="optional" type="deciNoFrac"/>
+	</xs:complexType>
+	<xs:complexType name="OrgSuccsType">
+		<xs:annotation>
+			<xs:documentation>Contains any predecessor and successor organisations.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Succ" type="OrgSuccType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrgSuccType">
+		<xs:annotation>
+			<xs:documentation>Represents an individual succession for the subject record.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Date" type="DateIVLValueType" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Type" type="maxStrLen12" minOccurs="1" maxOccurs="1">
+				<xs:annotation>
+					<xs:documentation>Type field will contain values of "Successor" or "Predecessor".</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Target" type="TargetType" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="uniqueSuccId" use="required" type="deciNoFrac"/>
+		<xs:attribute name="forwardSuccession" use="optional" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="OrgContactsType">
+		<xs:annotation>
+			<xs:documentation>All contacts for a given entity are held here.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Contact" type="OrgContactType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrgContactType">
+		<xs:annotation>
+			<xs:documentation>This data type supports the representation of a contact.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="type" use="required" type="maxStrLen12"/>
+		<xs:attribute name="value" use="required" type="maxStrLen255"/>
+	</xs:complexType>
+	<xs:complexType name="OrgRolesType">
+		<xs:annotation>
+			<xs:documentation>All Roles assigned to an entity are held here.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Role" type="OrgRoleType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="OrgRoleType">
+		<xs:annotation>
+			<xs:documentation>Role records held here and one must represent the entity Primary Role.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Date" type="DateIVLValueType" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="Status" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="id" use="required" type="xs:IDREF"/>
+		<xs:attribute name="uniqueRoleId" use="optional" type="deciNoFrac"/>
+		<xs:attribute name="primaryRole" use="optional" type="xs:boolean"/>
+	</xs:complexType>
+	<xs:complexType name="OrgAdditionalAttributesType">
+		<xs:annotation>
+			<xs:documentation>Additional Attributes linked to a given entity (currently not in scope).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AdditionalAttribute" type="AddAttrType" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="GeoLocType">
+		<xs:annotation>
+			<xs:documentation>Holds Location information for each Organisation entity, which can be a LocationStringsType element or a LocationId element.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="LocationId" type="II" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Location" type="LocationStringsType" minOccurs="0" maxOccurs="1"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="LocationStringsType">
+		<xs:annotation>
+			<xs:documentation>This data type supports the representation location information in strings.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="AddrLn1" type="maxStrLen75" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AddrLn2" type="maxStrLen75" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="AddrLn3" type="maxStrLen75" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="Town" type="maxStrLen75" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="County" type="maxStrLen75" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="PostCode" type="maxStrLen15" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="Country" type="maxStrLen50" minOccurs="0" maxOccurs="1" nillable="true"/>
+			<xs:element name="UPRN" type="deciNoFrac" minOccurs="0" maxOccurs="1" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ANY" abstract="true">
+		<xs:annotation>
+			<xs:documentation>This data type represents an abstract type from which more specific data types are derived.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+	</xs:complexType>
+	<xs:complexType name="ValDateType">
+		<xs:annotation>
+			<xs:documentation>This data type supports the representation of a date.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ANY">
+				<xs:sequence/>
+				<xs:attribute name="value" use="optional" type="xs:date"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="ValTimestampType">
+		<xs:annotation>
+			<xs:documentation>This data type supports the representation of a timeStamp.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ANY">
+				<xs:sequence/>
+				<xs:attribute name="value" use="optional" type="xs:dateTime"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DateIVLValueType">
+		<xs:annotation>
+			<xs:documentation>This is the custom date type to represent start and end dates for various components of the organisation record.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ANY">
+				<xs:sequence>
+					<xs:element name="Type" type="ValMaxStrLen12" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="Start" type="ValDateType" minOccurs="1" maxOccurs="1"/>
+					<xs:element name="End" type="ValDateType" minOccurs="0" maxOccurs="1" nillable="true"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="II">
+		<xs:annotation>
+			<xs:documentation>This data type supports the representation of an instance identifier.</xs:documentation>
+		</xs:annotation>
+		<xs:complexContent>
+			<xs:extension base="ANY">
+				<xs:sequence/>
+				<xs:attribute name="root" use="required" type="oidStrLen50"/>
+				<xs:attribute name="extension" use="required" type="maxStrLen12"/>
+				<xs:attribute name="assigningAuthorityName" use="required" type="maxStrLen25"/>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="AddAttrType">
+		<xs:annotation>
+			<xs:documentation>Container for Additional Attribute records (currently out of scope).</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Key" type="maxStrLen50" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="Value" type="maxStrLen255" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AttributeDate" type="ValDateType" minOccurs="0" maxOccurs="1" nillable="true"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen12">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 12 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen12"/>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen15">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 15 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen15"/>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen25">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 25 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen25"/>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen50">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 50 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen50"/>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen75">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 75 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen75"/>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen100">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 100 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen100"/>
+	</xs:complexType>
+	<xs:complexType name="ValMaxStrLen255">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold strings up to 255 characters in length.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="optional" type="maxStrLen255"/>
+	</xs:complexType>
+	<xs:complexType name="ValDeciNoFrac">
+		<xs:annotation>
+			<xs:documentation>Value attribute to hold whole numbers up to 12 digits.</xs:documentation>
+		</xs:annotation>
+		<xs:sequence/>
+		<xs:attribute name="value" use="required" type="deciNoFrac"/>
+	</xs:complexType>
+	<xs:simpleType name="oidStrLen50">
+		<xs:annotation>
+			<xs:documentation>This data type supports the representation of an object identifier.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([0-9][0-9]*)(\.[0-9][0-9]*)*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen12">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 12.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen15">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 15.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="15"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen25">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 25.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="25"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen50">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 50.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="50"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen75">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 75.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="75"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen100">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 100.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="100"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="maxStrLen255">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a string with a maximum length of 255.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="255"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="deciNoFrac">
+		<xs:annotation>
+			<xs:documentation>Defines a value as a decimal, where the maximum number of digits permitted is less than or equal to 12, and limits the value to a whole number only (no decimal places).</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="0"/>
+			<xs:totalDigits value="12"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
