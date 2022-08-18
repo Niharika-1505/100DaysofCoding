@@ -1,0 +1,138 @@
+Print Prime Numbers (Oracle)
+
+SELECT LISTAGG(prime_number,'&') WITHIN GROUP (ORDER BY prime_number) AS NUMBERS
+FROM(    
+    select l prime_number
+from (select level l from dual connect by level <= 1000)
+, (select level m from dual connect by level <= 1000)
+where m<=l
+group by l
+having count(case l/m when trunc(l/m) then 'Y' end) = 2);
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Draw The Triangle 1
+
+SET @number = 21;
+SELECT REPEAT('* ', @number := @number-1) FROM information_schema.tables;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Draw The Triangle 2
+
+SET @number = 0;
+SELECT REPEAT('* ', @number := @number+1) FROM information_schema.tables LIMIT 20;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 1 (Mysql)
+
+select city,state from station;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 3 (Mysql)
+
+select distinct city from station where id%2=0;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 4 (Mysql)
+
+select (count(city)-count(distinct city)) from station;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 5 (Mysql)
+
+(SELECT city, LENGTH(city) FROM station WHERE LENGTH(city)=(SELECT MAX(LENGTH(city)) FROM station)
+order by city LIMIT 1) union (SELECT city, LENGTH(city) FROM station WHERE LENGTH(city)=(SELECT MIN(LENGTH(city)) FROM station)
+order by city LIMIT 1) order by city asc;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 6 (Mysql)
+
+select distinct city from station where city like "A%" or city like "E%" or city like "I%" or
+city like "O%" or city like "U%";
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 7 (Mysql)
+
+SELECT DISTINCT city FROM station WHERE city REGEXP '[aeiou]$';
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 8 (Mysql)
+
+SELECT DISTINCT city
+FROM   station
+WHERE  city REGEXP '^[aeiouAEIOU].*[aeiouAEIOU]$';
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 9 (Mysql)
+
+SELECT DISTINCT city FROM station WHERE city NOT REGEXP '^[aeiouAEIOU]';
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 10 (Mysql)
+
+SELECT DISTINCT city FROM station WHERE city NOT REGEXP '[aeiouAEIOU]$';
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 11 (Mysql)
+
+SELECT DISTINCT city FROM station WHERE city NOT REGEXP '^[aeiouAEIOU].*[aeiouAEIOU]$';
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 12 (Mysql)
+
+SELECT DISTINCT CITY FROM STATION WHERE LOWER(SUBSTR(CITY,1,1)) NOT IN ('a','e','i','o','u') AND 
+LOWER(SUBSTR(CITY,LENGTH(CITY),1)) NOT IN ('a','e','i','o','u');   
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 15 (Mysql)
+
+select round(LONG_W,4) from station where lat_n=(select max(lat_n) from station where lat_n<137.2345);
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 16 (Mysql)
+
+select round(lat_n,4) from station where lat_n=(select min(lat_n) from station where lat_n>38.7780);
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 17 (Mysql)
+
+SELECT ROUND(LONG_W,4)
+FROM STATION
+WHERE LAT_N = (SELECT MIN(LAT_N) FROM STATION WHERE LAT_N > 38.7780);
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 18 (Mysql)
+
+select round(abs(min(lat_n)-max(lat_n))+abs(min(long_w)-max(long_w)),4) from station;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Weather Observation Station 19 (Mysql)
+
+select round(sqrt(((max(lat_n)-min(lat_n))*(max(lat_n)-min(lat_n)))+((max(long_w)-min(long_w))*(max(long_w)-min(long_w)))),4) from station;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Revising the Select Query I (Mysql)
+
+select * from CITY where countrycode="USA" and population>100000;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Revising the Select Query II (Mysql)
+
+select name from city where countrycode="USA" and population>120000;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Select All (Mysql)
+
+select * from city;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Select By ID (Mysql)
+
+select * from city where id=1661;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Japanese Cities' Attributes (Mysql)
+
+select * from city where countrycode="JPN";
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Japanese Cities' Names (Mysql)
+
+select name from city where countrycode="JPN";
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Higher Than 75 Marks (Mysql)
+
+select name from students where marks>75 order by substr(name,length(name)-2,3), id;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Employee Names (Mysql)
+
+select name from employee order by name;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Employee Salaries (Mysql)
+
+select name from employee where salary>2000 and months<10 order by employee_id;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Japan Population (Mysql)
+
+select sum(population) from city where countrycode="JPN";
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Population Density Difference (Mysql)
+
+select (Max(population)-Min(population)) from city;
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+

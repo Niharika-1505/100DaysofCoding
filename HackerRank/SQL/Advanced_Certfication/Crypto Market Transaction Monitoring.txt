@@ -1,0 +1,29 @@
+WITH difference AS (
+SELECT
+	*,
+	DATEDIFF(MINUTE,LAG(dt) OVER (ORDER BY sender,dt),dt) AS difF_minute,
+	ROW_NUMBER() OVER(ORDER BY sender,dt) AS rownumber
+FROM transactions
+)
+,rn AS (
+SELECT
+	rownumber
+FROM difference
+WHERE abs(diff_minute) < 60
+),
+sequences AS ( 
+SELECT 
+	*
+FROM difference
+WHERE rownumber IN(SELECT rownumber FROM rn) UNION (SELECT rownumber - 1 AS rownumber FROM rn)
+)
+SELECT 
+   sender,
+   MIN(dt) as Sequence_start,
+   MAX(dt) as Sequence_end,
+   COUNT(rownumber) as transactions_count,
+   SUM(amount) as transactions_sum
+FROM sequences
+GROUP BY sender
+HAVING SUM(amount) >= 150
+order by sender,MIN(dt),MAX(dt)

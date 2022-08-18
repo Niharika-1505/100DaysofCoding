@@ -1,0 +1,99 @@
+WITH Base AS (
+SELECT 
+    sub1.submission_date,
+    sub1.hacker_id,
+    COUNT (DISTINCT sub1.submission_id) AS number_of_submissions_that_contest_day,
+    1 + DATEDIFF(DAY, 'March 1, 2016', sub1.submission_date) AS contest_day_number,
+    COUNT (DISTINCT sub2.submission_date) AS total_number_of_submissions_till_the_current_contest_date
+FROM Submissions sub1 
+JOIN Submissions sub2
+ON sub1.hacker_id = sub2.hacker_id AND sub1.submission_date >= sub2.submission_date
+GROUP BY sub1.submission_date, sub1.hacker_id
+),
+No_of_submissions_by_hackers_who_submitted_each_day_until_each_contest_day AS (
+SELECT 
+    submission_date,
+    hacker_id,
+    number_of_submissions_that_contest_day
+FROM BASE 
+WHERE total_number_of_submissions_till_the_current_contest_date = contest_day_number
+),
+Count_of_number_of_hackers_who_submitted_until_each_contest_day AS (
+SELECT 
+    submission_date, 
+    COUNT(hacker_id) AS number_of_hackers
+FROM No_of_submissions_by_hackers_who_submitted_each_day_until_each_contest_day
+GROUP BY submission_date
+),
+Maximum_no_of_submissions_made_by_hacker_that_contest_day AS (
+SELECT 
+    submission_date, 
+    MAX(number_of_submissions_that_contest_day) AS max_no_of_submissions
+FROM Base 
+GROUP BY submission_date
+),
+Final_data AS (
+SELECT 
+    m1.submission_date,
+    c1.number_of_hackers,
+    (SELECT 
+        TOP 1 b.hacker_id 
+     FROM BASE b
+     WHERE m1.submission_date = b.submission_date AND m1.max_no_of_submissions =          b.number_of_submissions_that_contest_day
+     ORDER BY b.hacker_id) AS hacker_id
+FROM Maximum_no_of_submissions_made_by_hacker_that_contest_day AS m1
+JOIN Count_of_number_of_hackers_who_submitted_until_each_contest_day AS c1 
+ON m1.submission_date = c1.submission_date
+)
+SELECT 
+    fd.*, 
+    hck.name
+FROM Final_data fd
+JOIN Hackers hck 
+ON fd.hacker_id = hck.hacker_id 
+ORDER BY submission_date
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+Practice
+
+WITH 
+hackers_count_of_submission_dates AS(
+SELECT 
+    hacker_id,
+    count(DISTINCT submission_date) AS No_Days_Submitted
+FROM SUBMISSIONS
+GROUP BY hacker_id
+),
+List_of_hackers_who_submitted_everyday AS(
+SELECT 
+    hacker_id
+FROM hackers_count_of_submission_dates
+WHERE No_Days_Submitted=15
+)
+,
+No_of_subs_per_day_by_each_hacker AS(
+SELECT 
+    submission_date,
+    hacker_id,
+    COUNT(DISTINCT submission_id) AS No_of_Submissions,
+    ROW_NUMBER() OVER(PARTITION BY submission_date ORDER BY submission_date,COUNT(DISTINCT submission_id) desc, hacker_id) AS row_number
+FROM SUBMISSIONS
+GROUP BY submission_date,hacker_id 
+),
+Count_distinct_hacker_submissions_per_day AS(
+SELECT 
+    submission_date,
+    COUNT(DISTINCT hacker_id) AS No_of_Hackers
+FROM SUBMISSIONS
+GROUP BY submission_date
+)
+SELECT 
+    b.submission_date,
+    No_of_Hackers,
+    b.hacker_id,
+    name
+FROM HACKERS h
+INNER JOIN No_of_subs_per_day_by_each_hacker b
+ON h.hacker_id=b.hacker_id
+INNER JOIN Count_distinct_hacker_submissions_per_day c
+ON b.submission_date=c.submission_date
+WHERE row_number=1

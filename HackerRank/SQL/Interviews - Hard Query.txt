@@ -1,0 +1,55 @@
+Interviews
+
+SELECT 
+    CONTEST_ID, 
+    HACKER_ID, 
+    NAME, 
+    SUM(TOTAL_SUBMISSIONS), 
+    SUM(TOTAL_ACCEPTED_SUBMISSIONS), 
+    SUM(TOTAL_VIEWS), 
+    SUM(TOTAL_UNIQUE_VIEWS)
+FROM (
+    SELECT 
+        CT.CONTEST_ID,
+        CT.HACKER_ID, 
+        CT.NAME,
+        ISNULL(
+                (
+                    SELECT 
+                        SUM(SS.TOTAL_SUBMISSIONS)
+                    FROM SUBMISSION_STATS SS 
+                    WHERE SS.CHALLENGE_ID = CL.CHALLENGE_ID
+                ),
+                0) AS TOTAL_SUBMISSIONS,
+        ISNULL(
+                (
+                    SELECT 
+                        SUM(SS.TOTAL_ACCEPTED_SUBMISSIONS) 
+                    FROM SUBMISSION_STATS SS 
+                    WHERE SS.CHALLENGE_ID = CL.CHALLENGE_ID
+                ),
+                0) AS TOTAL_ACCEPTED_SUBMISSIONS,
+        ISNULL(
+                (
+                    SELECT 
+                        SUM(SS.TOTAL_VIEWS) 
+                    FROM VIEW_STATS SS 
+                    WHERE SS.CHALLENGE_ID = CL.CHALLENGE_ID
+                ),
+                0) AS TOTAL_VIEWS,
+         ISNULL(
+                (
+                    SELECT 
+                        SUM(SS.TOTAL_UNIQUE_VIEWS) 
+                    FROM VIEW_STATS SS 
+                    WHERE SS.CHALLENGE_ID = CL.CHALLENGE_ID
+                ),
+                0) AS TOTAL_UNIQUE_VIEWS
+    FROM CONTESTS CT
+    LEFT JOIN COLLEGES CG ON CT.CONTEST_ID = CG.CONTEST_ID
+    LEFT JOIN CHALLENGES CL ON CL.COLLEGE_ID = CG.COLLEGE_ID   
+) G
+GROUP BY CONTEST_ID, HACKER_ID, NAME
+HAVING SUM(TOTAL_SUBMISSIONS)+ SUM(TOTAL_ACCEPTED_SUBMISSIONS)+ SUM(TOTAL_VIEWS)+ SUM(TOTAL_UNIQUE_VIEWS) > 0
+ORDER BY CONTEST_ID;
+ORDER BY CONTEST_ID;
